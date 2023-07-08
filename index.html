@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Overpass">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Kolawole Roqeeb | Interactive rating component</title>
+  
+</head>
+
+<body>
+<main>
+<div id='minibody'>
+	<div id='text'>
+    	<div class="circle">
+		<img src="images/icon-star.svg" alt="star" > 
+		</div>
+ <h1> How did we do? </h1>
+
+ <p> Please let us know how we did with your support request. All feedback is appreciated 
+  to help us improve our offering!</p>
+
+ <ul style= 'list-style-type:none' >
+ 	<li class='circle' onclick= 'number(this)'>1</li>
+	<li class='circle' onclick= 'number(this)'>2</li> 
+ 	<li class='circle' onclick= 'number(this)'>3</li> 
+	<li class='circle' onclick= 'number(this)'>4</li> 
+ 	<li class='circle' onclick= 'number(this)'>5</li>
+ </ul>
+
+ <div id='btn' onclick='myfunction("minibody2","text")'> SUBMIT </div>
+  
+</div> 
+
+<div id='minibody2'> 
+		<div class='img2'>
+	<img src="images/illustration-thank-you.svg" alt="Thank you" > 
+		</div>
+  <div id = 'result'>You selected <span id= 'i'>Nothing</span> out of 5 </div>
+
+  <h1> Thank you! </h1>
+  
+ <p> We appreciate you taking the time to give a rating. If you ever need more support, 
+  don’t hesitate to get in touch!</p>
+
+</div> </div>
+
+
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Kolawole Roqeeb</a>
+    
+  </div>
+</main>
+  
+ <script>
+function myfunction(minibody2 , text){
+var change = document.getElementById(text);
+var change2 = document.getElementById(minibody2);
+if (change && change2) {
+	change.style.display ="none";
+    change2.style.display = "grid";}
+ };
+ 
+ function number(value){
+const n = value.textContent;
+document.getElementById("i").innerHTML = n;
+ };
+ </script>
+  
+</body>
+</html>
